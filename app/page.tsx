@@ -1,65 +1,120 @@
-import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/sections/Hero";
+import StatsStrip from "@/components/sections/StatsStrip";
+import CoreValues from "@/components/sections/CoreValues";
+import ProcessSteps from "@/components/sections/ProcessSteps";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import ServiceCard from "@/components/sections/ServiceCard";
+import IndustryList from "@/components/sections/IndustryList";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
+import Button from "@/components/ui/Button";
+import { services } from "@/content/services";
+import { industries } from "@/content/industries";
+import { serviceAreas } from "@/content/serviceAreas";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <>
+      <Hero />
+      <StatsStrip />
+      <CoreValues />
+      <ProcessSteps />
+
+      <section className="bg-gradient-to-b from-primary-50/60 to-white py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading
+              eyebrow="Our services"
+              title="Logistics solutions built for healthcare"
+              description="A sample of what we handle daily — see the full list for everything we offer."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Link
+              href="/services"
+              className="font-mono text-xs uppercase tracking-widest2 text-accent-600 hover:text-accent-700"
+            >
+              View all services →
+            </Link>
+          </div>
+          <Reveal className="mt-12" delay={100}>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {services.slice(0, 6).map((service) => (
+                <ServiceCard key={service.slug} service={service} />
+              ))}
+            </div>
+          </Reveal>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <WhyChooseUs />
+
+      <section className="bg-white py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading eyebrow="Industries we serve" title="Trusted across the healthcare system" />
+            <Link
+              href="/industries"
+              className="font-mono text-xs uppercase tracking-widest2 text-accent-600 hover:text-accent-700"
+            >
+              View all industries →
+            </Link>
+          </div>
+          <Reveal className="mt-12" delay={100}>
+            <IndustryList industries={industries.slice(0, 8)} />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-950 to-primary-900 py-20 text-white lg:py-24">
+        <div
+          className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 animate-blob rounded-full bg-accent-500/10 blur-3xl"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
+          <SectionHeading
+            eyebrow="Service areas"
+            title="Proudly serving Houston and surrounding communities"
+            variant="dark"
+          />
+          <Reveal className="mt-10" delay={100}>
+            <div className="flex flex-wrap gap-3">
+              {serviceAreas.map((area) => (
+                <span
+                  key={area.name}
+                  className={`border px-4 py-2 font-mono text-xs uppercase tracking-widest2 transition-colors ${
+                    area.isHub
+                      ? "border-accent-500 bg-accent-500/10 text-accent-400"
+                      : "border-white/20 text-primary-100/85 hover:border-white/40"
+                  }`}
+                >
+                  {area.name}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+          <Link
+            href="/service-areas"
+            className="mt-8 inline-block font-mono text-xs uppercase tracking-widest2 text-accent-400 hover:text-accent-300"
+          >
+            View full coverage map →
+          </Link>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-b from-accent-50 via-white to-white py-20 text-center lg:py-24">
+        <div className="mx-auto max-w-2xl px-6">
+          <h2 className="font-serif text-3xl text-primary-950">
+            Need reliable healthcare transportation?
+          </h2>
+          <p className="mt-4 text-primary-950/75">
+            Whether you require recurring medical courier services or an
+            urgent same-day delivery, Idoko Legacy is ready to help.
+          </p>
+          <Button href="/quote" className="mt-8">
+            Request a quote
+          </Button>
+        </div>
+      </section>
+    </>
   );
 }
