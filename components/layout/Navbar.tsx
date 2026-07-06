@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
@@ -28,31 +29,41 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300">
-      {/* Navbar Bar */}
       <div
         className={`w-full transition-all duration-300 ${
           scrolled
-            ? 'bg-white py-3.5 shadow-sm border-b border-gray-100'
-            : 'bg-transparent py-5'
+            ? 'bg-white/95 py-2 shadow-md shadow-black/[0.06] backdrop-blur-sm'
+            : 'bg-transparent py-4'
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 lg:px-10">
-          <Link
-            href="/"
-            className="flex flex-col leading-none"
-            onClick={() => setOpen(false)}
-          >
-            <span
-              className={`text-xl font-bold tracking-tight transition-colors ${
-                scrolled ? 'text-primary-950' : 'text-white'
-              }`}
+        {/*
+          Logo lives in an absolutely-positioned wrapper inside a fixed-width
+          spacer. That takes it out of the flex row entirely, so the row's
+          own height (driven by py-2 / py-4) can shrink on scroll while the
+          logo itself stays a fixed, comfortable size and is simply centered
+          on top of the bar. No overflow-hidden anywhere, so nothing clips.
+        */}
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 lg:px-10">
+          <div className="relative h-9 w-[140px] shrink-0 sm:h-12 sm:w-[170px]">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="absolute left-0 top-1/2 -translate-y-1/2"
             >
-              Idoko Legacy
-            </span>
-            <span className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-accent-400">
-              Trust today &middot; Legacy tomorrow
-            </span>
-          </Link>
+              <Image
+                src={
+                  scrolled
+                    ? '/assets/icons/logo.png'
+                    : '/assets/icons/light-logo-t.png'
+                }
+                alt="Idoko Legacy LLC"
+                width={200}
+                height={80}
+                priority
+                className="h-14 w-auto object-contain transition-all duration-300 sm:h-16"
+              />
+            </Link>
+          </div>
 
           <nav className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => {
@@ -65,10 +76,10 @@ export default function Navbar() {
                   className={`relative px-5 py-2 text-sm font-medium transition-all duration-200 ${
                     scrolled
                       ? active
-                        ? 'text-primary-950 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-6 after:bg-primary-600'
+                        ? 'text-primary-950 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-6 after:-translate-x-1/2 after:bg-primary-600'
                         : 'text-gray-600 hover:text-gray-900'
                       : active
-                        ? 'text-white after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-6 after:bg-white'
+                        ? 'text-white after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-6 after:-translate-x-1/2 after:bg-white'
                         : 'text-primary-100/85 hover:text-white'
                   }`}
                 >
@@ -81,8 +92,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/quote"
-              className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-all border-accent-400 text-accent-400 hover:bg-accent-500 hover:text-white'
-              }`}
+              className="rounded-full border border-accent-400 px-5 py-2.5 text-sm font-semibold text-accent-400 transition-all hover:bg-accent-500 hover:text-white"
             >
               Request a quote
             </Link>
@@ -91,7 +101,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className={`lg:hidden transition-colors ${scrolled ? 'text-gray-800' : 'text-white'}`}
+            className={`transition-colors lg:hidden ${scrolled ? 'text-gray-800' : 'text-white'}`}
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={26} /> : <Menu size={26} />}

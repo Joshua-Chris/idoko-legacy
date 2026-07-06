@@ -6,10 +6,12 @@ export default function ServiceCard({ service }: { service: Service }) {
 
   return (
     <div className="group overflow-hidden rounded-2xl border border-primary-950/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-lg hover:shadow-primary-950/5">
-      <div
-        className="h-48 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-        style={{ backgroundImage: `url('${service.imageUrl}')` }}
-      />
+      <div className="h-60 w-full overflow-hidden sm:h-64">
+        <div
+          className="h-full w-full bg-cover bg-top transition-transform duration-500 group-hover:scale-105"
+          style={{ backgroundImage: `url('${service.imageUrl}')` }}
+        />
+      </div>
 
       <div className="p-7">
         <Icon

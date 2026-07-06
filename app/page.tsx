@@ -23,19 +23,12 @@ export default function Home() {
 
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading
-              eyebrow="Our services"
-              title="Logistics solutions built for healthcare"
-              description="A sample of what we handle daily — see the full list for everything we offer."
-            />
-            <Link
-              href="/services"
-              className="text-sm font-semibold text-accent-600 hover:text-accent-700"
-            >
-              View all services →
-            </Link>
-          </div>
+          <SectionHeading
+            eyebrow="Our services"
+            title="Logistics solutions built for healthcare"
+            description="A sample of what we handle daily — see the full list for everything we offer."
+          />
+
           <Reveal className="mt-12" delay={100}>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.slice(0, 6).map((service) => (
@@ -43,6 +36,15 @@ export default function Home() {
               ))}
             </div>
           </Reveal>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center rounded-full bg-primary-950 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-500"
+            >
+              View all services →
+            </Link>
+          </div>
         </div>
       </section>
 

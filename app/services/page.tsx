@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import PageCTA from '@/components/ui/PageCTA';
-import ServiceCard from '@/components/sections/ServiceCard';
+import ServiceFeatureCard from '@/components/sections/ServiceFeatureCard';
+import ServicesSidebar from '@/components/sections/ServicesSidebar';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { services } from '@/content/services';
@@ -41,11 +42,19 @@ export default function ServicesPage() {
       />
 
       <section className="bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-10">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
-            ))}
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[240px_minmax(0,1fr)]">
+            <ServicesSidebar services={services} />
+
+            <div className="flex min-w-0 flex-col gap-8">
+              {services.map((service, index) => (
+                <ServiceFeatureCard
+                  key={service.slug}
+                  service={service}
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -59,6 +68,7 @@ export default function ServicesPage() {
             title="Why providers rely on us for every shipment"
             align="center"
           />
+
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {differentiators.map((item) => (
               <div
@@ -68,6 +78,7 @@ export default function ServicesPage() {
                 <h3 className="text-lg font-bold text-primary-950">
                   {item.title}
                 </h3>
+
                 <p className="mt-2 text-base leading-relaxed text-primary-950/75">
                   {item.description}
                 </p>
