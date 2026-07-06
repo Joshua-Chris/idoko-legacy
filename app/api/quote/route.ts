@@ -1,3 +1,8 @@
+import { NextResponse } from 'next/server';
+
+export async function POST() {
+  return NextResponse.json({ message: 'Coming soon' }, { status: 501 });
+}
 // import { NextResponse } from "next/server";
 // import { quoteSchema } from "@/lib/validations";
 // import { resend, NOTIFY_EMAIL, FROM_EMAIL } from "@/lib/resend";
