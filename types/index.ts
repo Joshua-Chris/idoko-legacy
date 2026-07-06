@@ -1,16 +1,35 @@
-import type { LucideIcon } from "lucide-react";
+import type { LucideIcon } from 'lucide-react';
 
 export type IconName =
-  | "truck" | "testTube" | "flaskConical" | "pill" | "packageCheck"
-  | "route" | "zap" | "calendarClock" | "heartPulse" | "settings2"
-  | "building2" | "stethoscope" | "microscope" | "scanLine" | "pillBottle"
-  | "smile" | "boxes" | "home" | "activity" | "network" | "flaskRound";
+  | 'truck'
+  | 'testTube'
+  | 'flaskConical'
+  | 'pill'
+  | 'packageCheck'
+  | 'route'
+  | 'zap'
+  | 'calendarClock'
+  | 'heartPulse'
+  | 'settings2'
+  | 'building2'
+  | 'stethoscope'
+  | 'microscope'
+  | 'scanLine'
+  | 'pillBottle'
+  | 'smile'
+  | 'boxes'
+  | 'home'
+  | 'activity'
+  | 'network'
+  | 'flaskRound';
 
 export interface Service {
   slug: string;
   title: string;
   description: string;
   icon: IconName;
+  photoHint: string;
+  imageUrl: string;
 }
 
 export interface Industry {
