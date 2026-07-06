@@ -140,14 +140,13 @@ export default function Hero() {
     if (touchStartX.current === null) return;
     const delta = e.changedTouches[0].clientX - touchStartX.current;
     if (Math.abs(delta) > SWIPE_THRESHOLD) {
-      setAutoplay(false);
+      // Swiping just changes the slide — autoplay keeps running on mobile
+      // so the timer never gets stuck off after a swipe.
       setActive((i) =>
         delta < 0
           ? (i + 1) % slides.length
           : (i - 1 + slides.length) % slides.length,
       );
-    } else {
-      setAutoplay(false);
     }
     touchStartX.current = null;
   }
@@ -159,7 +158,7 @@ export default function Hero() {
       className="relative -mt-[88px] flex min-h-[calc(100svh+88px)] flex-col overflow-hidden border-b border-accent-600/30 bg-primary-950"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      onClick={() => setAutoplay(false)}
+      onMouseDown={() => setAutoplay(false)}
     >
       {slides.map((s, i) => (
         <div
