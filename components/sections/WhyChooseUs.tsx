@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import RouteGrid from '@/components/ui/RouteGrid';
 import Reveal from '@/components/ui/Reveal';
@@ -37,7 +38,23 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-primary-950 py-20 text-white lg:py-28">
+    <section className="relative overflow-hidden bg-bgDark py-20 text-white lg:py-28">
+      {/* Background image */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/assets/images/image6.jpeg"
+          alt=""
+          fill
+          priority={false}
+          className="object-cover"
+        />
+        {/* Overlay: lightened so the photo shows through, still keeps text legible */}
+        <div className="absolute inset-0 bg-bgDark/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bgDark/70 via-bgDark/40 to-bgDark/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bgDark/60 via-transparent to-bgDark/60" />
+      </div>
+
+      {/* Existing decorative layers stay above the image, below the content */}
       <RouteGrid id="why-choose-grid" className="text-accent-500/[0.06]" />
       <div
         className="pointer-events-none absolute right-0 top-0 h-80 w-80 animate-blob rounded-full bg-accent-500/10 blur-3xl"
@@ -56,7 +73,7 @@ export default function WhyChooseUs() {
             {reasons.map((reason) => (
               <div
                 key={reason.title}
-                className="group rounded-2xl border border-accent-500/30 bg-white/[0.04] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-white/[0.08]"
+                className="group rounded-2xl border border-accent-500/30 bg-white/[0.04] p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-white/[0.08]"
               >
                 <h3 className="text-lg font-bold text-white">{reason.title}</h3>
                 <p className="mt-2 text-base leading-relaxed text-primary-100/85">

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -9,9 +10,7 @@ const quickLinks = [
   { href: '/service-areas', label: 'Service areas' },
 ];
 
-const moreLinks = [
-  { href: '/contact', label: 'Contact' },
-  { href: '/quote', label: 'Request quote' },
+const legalLinks = [
   { href: '/privacy-policy', label: 'Privacy policy' },
   { href: '/terms-of-service', label: 'Terms of service' },
 ];
@@ -36,11 +35,10 @@ export default function Footer() {
               Healthcare logistics &amp; medical courier services
             </p>
             <p className="mt-5 text-sm leading-relaxed text-primary-100/70">
-              14781 Memorial Drive #569
-              <br />
-              Houston, Texas 77079
-              <br />
-              United States
+              A professional healthcare logistics and medical courier company
+              delivering secure, dependable, and efficient transportation
+              throughout Houston, Texas. Every delivery represents
+              someone&apos;s health.
             </p>
           </div>
 
@@ -66,38 +64,77 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-400">
               Contact
             </h3>
-            <p className="mt-4 text-sm leading-relaxed text-primary-100/70">
-              Phone:{' '}
-              <a href="tel:+18329779202" className="hover:text-white">
-                (832) 977-9202
-              </a>
-              <br />
-              Email:{' '}
-              <a
-                href="mailto:info@idokolegacy.com"
-                className="hover:text-white"
-              >
-                Info@idokolegacy.com
-              </a>
-            </p>
-            <ul className="mt-5 space-y-3">
-              {moreLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-100/80 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <ul className="mt-4 space-y-4">
+              <li className="flex items-start gap-3">
+                <MapPin
+                  className="mt-0.5 h-4 w-4 shrink-0 text-accent-400"
+                  aria-hidden="true"
+                />
+                <span className="text-sm leading-relaxed text-primary-100/70">
+                  14781 Memorial Drive #569
+                  <br />
+                  Houston, Texas 77079
+                  <br />
+                  United States
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone
+                  className="h-4 w-4 shrink-0 text-accent-400"
+                  aria-hidden="true"
+                />
+                <a
+                  href="tel:+18329779202"
+                  className="text-sm text-primary-100/70 transition-colors hover:text-white"
+                >
+                  (832) 977-9202
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail
+                  className="h-4 w-4 shrink-0 text-accent-400"
+                  aria-hidden="true"
+                />
+                <a
+                  href="mailto:info@idokolegacy.com"
+                  className="text-sm text-primary-100/70 transition-colors hover:text-white"
+                >
+                  Info@idokolegacy.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-primary-100/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2026 Idoko Legacy LLC. All rights reserved.</p>
-          <p>Houston, TX &middot; 29.7604&deg; N, 95.3698&deg; W</p>
+        <div className="mt-14 grid grid-cols-1 items-center gap-4 border-t border-white/10 pt-6 text-xs text-primary-100/60 sm:grid-cols-3">
+          <p className="text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Idoko Legacy LLC. All rights
+            reserved.
+          </p>
+
+          <p className="text-center">
+            Designed by{' '}
+            <a
+              href="https://meltechgrp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-100/80 transition-colors hover:text-white"
+            >
+              Mel Technologies
+            </a>
+          </p>
+
+          <div className="flex items-center justify-center gap-5 sm:justify-end">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

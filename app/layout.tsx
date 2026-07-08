@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import BackToTop from '@/components/ui/BackToTop';
+import CursorGlow from '@/components/ui/CursorGlow';
+import PageTransition from '@/components/ui/PageTransition';
 import './globals.css';
 
 const inter = Inter({
@@ -81,8 +83,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <CursorGlow />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
         <BackToTop />
       </body>

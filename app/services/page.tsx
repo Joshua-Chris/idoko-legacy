@@ -39,6 +39,7 @@ export default function ServicesPage() {
         title="Comprehensive healthcare logistics solutions"
         description="From routine lab runs to STAT deliveries, every service is built around the standards healthcare providers depend on."
         photoHint="medical supplies pharmacy shelves"
+        photoSrc="assets/images/bgimage.jpeg"
       />
 
       <section className="bg-white py-20 lg:py-28">
@@ -93,6 +94,7 @@ export default function ServicesPage() {
         description="Tell us about your shipment and we'll recommend the right logistics solution."
         buttonLabel="Request a quote"
         buttonHref="/quote"
+        backgroundImage="https://images.unsplash.com/photo-1417733403748-83bbc7c05140?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1M3x8fGVufDB8fHx8fA%3D%3D"
       />
     </>
   );

@@ -16,6 +16,7 @@ export default function ContactPage() {
         eyebrow="Contact us"
         title="We'd love to hear from you"
         photoHint="logistics office desk professional"
+        photoSrc="https://images.unsplash.com/photo-1758612214882-03f8a1d7211f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMxfHx8ZW58MHx8fHx8"
       />
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 lg:grid-cols-[1fr_1.3fr] lg:px-10">

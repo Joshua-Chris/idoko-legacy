@@ -111,7 +111,7 @@ const slides: Slide[] = [
 ];
 
 // 🔧 TWEAK SLIDE SPEED HERE — milliseconds per slide before auto-advancing.
-const SLIDE_DURATION = 16000;
+const SLIDE_DURATION = 4000;
 const SWIPE_THRESHOLD = 50;
 
 export default function Hero() {
@@ -180,7 +180,7 @@ export default function Hero() {
       ))}
 
       {/* Dark blue overlay off primary-950 — gradient, lighter at top, deeper at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/70 via-primary-dark/90 to-primary-dark/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bgDark/50 via-bgDark/70 to-bgDark/85" />
 
       {/*
         Single container, no nested wrapper — mx-auto max-w-6xl px-6 py-20 lg:px-10
@@ -201,7 +201,10 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Button href="/quote" className="w-full text-center sm:w-auto">
+              <Button
+                href="/quote"
+                className="w-full text-center sm:w-auto text-white"
+              >
                 Request a quote
               </Button>
               <Button

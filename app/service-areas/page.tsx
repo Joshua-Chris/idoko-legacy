@@ -17,6 +17,7 @@ export default function ServiceAreasPage() {
         title="Proudly serving Houston and beyond"
         description="Local expertise means faster routes and fewer surprises. Here's where we operate."
         photoHint="houston texas skyline"
+        photoSrc="assets/images/image7.jpeg"
       />
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
@@ -50,6 +51,7 @@ export default function ServiceAreasPage() {
         title="Check coverage for your facility"
         buttonLabel="Request a quote"
         buttonHref="/quote"
+        backgroundImage="https://images.unsplash.com/photo-1717496331312-3e8aacfa27a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIxfHx8ZW58MHx8fHx8"
       />
     </>
   );

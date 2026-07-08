@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-primary-950 py-20 text-white lg:py-24">
+      <section className="relative overflow-hidden bg-white py-20 text-primary-950 lg:py-24">
         <div
           className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 animate-blob rounded-full bg-accent-500/10 blur-3xl"
           aria-hidden="true"
@@ -79,7 +79,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Service areas"
             title="Proudly serving Houston and surrounding communities"
-            variant="dark"
+            variant="light"
           />
           <Reveal className="mt-10" delay={100}>
             <div className="flex flex-wrap gap-3">
@@ -88,8 +88,8 @@ export default function Home() {
                   key={area.name}
                   className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
                     area.isHub
-                      ? 'border-accent-500 bg-accent-500/10 text-accent-400'
-                      : 'border-white/20 text-primary-100/85 hover:border-white/40'
+                      ? 'border-accent-500 bg-accent-500/10 text-accent-600'
+                      : 'border-primary-950/15 text-primary-950/70 hover:border-primary-950/30'
                   }`}
                 >
                   {area.name}
@@ -99,7 +99,7 @@ export default function Home() {
           </Reveal>
           <Link
             href="/service-areas"
-            className="mt-8 inline-block text-sm font-semibold text-accent-400 hover:text-accent-300"
+            className="mt-8 inline-block text-sm font-semibold text-accent-600 hover:text-accent-700"
           >
             View full coverage map →
           </Link>

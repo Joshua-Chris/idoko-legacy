@@ -18,7 +18,7 @@ export default function AboutPage() {
         eyebrow="About us"
         title="Delivering excellence in healthcare logistics"
         description="A professional healthcare logistics and medical courier company dedicated to secure, dependable, and efficient transportation throughout Houston, Texas."
-        // photoSrc="https://images.unsplash.com/photo-1579037005241-a79202c7e9fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+        photoSrc="assets/images/image5.jpeg"
         photoHint="healthcare team hospital hallway"
       />
 
@@ -89,6 +89,7 @@ export default function AboutPage() {
         title="Ready to work with a logistics partner you can trust?"
         buttonLabel="Request a quote"
         buttonHref="/quote"
+        backgroundImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDU4fHx8ZW58MHx8fHx8"
       />
     </>
   );
