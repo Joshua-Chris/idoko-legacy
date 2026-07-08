@@ -164,7 +164,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="group relative w-full overflow-hidden rounded-full bg-accent-500 px-6 py-3.5 text-sm font-semibold text-primary-950 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.2)] transition-all duration-200 hover:bg-accent-400 hover:shadow-[0_6px_20px_-4px_rgba(0,0,0,0.3)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100 sm:w-auto"
+        className="group relative w-full overflow-hidden rounded-full bg-accent-500 px-6 py-3.5 text-sm font-semibold text-primary-950 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.2)] transition-all duration-200 hover:bg-accent-400 hover:shadow-[0_6px_20px_-4px_rgba(0,0,0,0.3)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100 sm:w-auto cursor-pointer"
       >
         <span className="flex items-center justify-center gap-2">
           {status === 'submitting' && (
