@@ -74,7 +74,7 @@ const slides: Slide[] = [
     },
   },
   {
-    image: 'https://images.unsplash.com/photo-1639278001900-e772db0c6b4a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGltZSUyMGNyaXRpY2FsJTIwbWVkaWNhbCUyMGNvdXJpZXIlMjBkZWxpdmVyeXxlbnwwfHwwfHx8Mg%3D%3D',
+    image: '/assets/images/image10.jpeg',
     eyebrow: 'STAT deliveries',
     title: 'When every minute matters, we move first.',
     description:
