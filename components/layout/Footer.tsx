@@ -8,6 +8,7 @@ const quickLinks = [
   { href: '/services', label: 'Services' },
   { href: '/hipaa-compliance', label: 'HIPAA compliance' },
   { href: '/service-areas', label: 'Service areas' },
+  { href: '/careers', label: 'Careers' },
 ];
 
 const legalLinks = [
@@ -23,7 +24,7 @@ export default function Footer() {
           <div className="lg:pr-8">
             <Image
               src="/assets/icons/light-logo-t.png"
-              alt="Idoko Legacy LLC"
+              alt="Idoko Legacy Medical Courier"
               width={200}
               height={80}
               className="h-14 w-auto object-contain sm:h-16"
@@ -120,7 +121,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-primary-100/80 transition-colors hover:text-white"
             >
-              Mel Technologies
+              MEL-Technologies
             </a>
           </p>
 

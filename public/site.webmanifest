@@ -1,0 +1,14 @@
+{
+  "name": "Idoko Legacy Medical Courier",
+  "short_name": "Idoko Legacy",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#172554",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

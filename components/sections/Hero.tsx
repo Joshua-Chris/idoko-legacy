@@ -375,7 +375,9 @@ function HeroPanel({ panel }: { panel: PanelData }) {
       </div>
 
       <div className="border-t border-white/15 pt-5">
-        <p className="text-sm font-medium text-accent-300">Idoko Legacy LLC</p>
+        <p className="text-sm font-medium text-accent-300">
+          Idoko Legacy Medical Courier
+        </p>
         <p className="text-xs text-white/60">Trust Today. Legacy Tomorrow.</p>
       </div>
     </div>

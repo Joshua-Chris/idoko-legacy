@@ -32,7 +32,7 @@ export default function MobileMenu({
           <Link href="/" onClick={onClose}>
             <Image
               src="/assets/icons/light-logo-t.png"
-              alt="Idoko Legacy LLC"
+              alt="Idoko Legacy Medical Courier"
               width={190}
               height={70}
               className="h-11 w-auto"

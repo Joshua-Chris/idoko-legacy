@@ -22,7 +22,7 @@ export default function PageCTA({
       <div className="absolute inset-0" aria-hidden="true">
         <Image
           src={backgroundImage}
-          alt=""
+          alt="Idoko Legacy Background image"
           fill
           priority={false}
           className="object-cover"

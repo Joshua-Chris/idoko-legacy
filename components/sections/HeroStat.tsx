@@ -51,7 +51,9 @@ export default function HeroStat() {
       </div>
 
       <div className="mt-auto pt-10 border-t border-white/15">
-        <p className="text-sm font-medium text-accent-300">Idoko Legacy LLC</p>
+        <p className="text-sm font-medium text-accent-300">
+          Idoko Legacy Medical Courier
+        </p>
         <p className="text-xs text-white/60">Trust Today. Legacy Tomorrow.</p>
       </div>
     </div>

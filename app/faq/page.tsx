@@ -4,9 +4,9 @@ import PageCTA from '@/components/ui/PageCTA';
 import { faqs } from '@/content/faq';
 
 export const metadata: Metadata = {
-  title: 'FAQ | Idoko Legacy LLC',
+  title: 'FAQ | Idoko Legacy Medical Courier',
   description:
-    "Answers to common questions about Idoko Legacy LLC's healthcare logistics and medical courier services.",
+    "Answers to common questions about Idoko Legacy Medical Courier's healthcare logistics and medical courier services.",
 };
 
 export default function FaqPage() {

@@ -4,9 +4,9 @@ import PageCTA from '@/components/ui/PageCTA';
 import { serviceAreas } from '@/content/serviceAreas';
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Idoko Legacy LLC',
+  title: 'Service Areas | Idoko Legacy Medical Courier',
   description:
-    'Idoko Legacy LLC proudly serves Houston, Katy, Sugar Land, Cypress, Pearland, and surrounding Texas communities.',
+    'Idoko Legacy Medical Courier proudly serves Houston, Katy, Sugar Land, Cypress, Pearland, and surrounding Texas communities.',
 };
 
 export default function ServiceAreasPage() {
@@ -17,7 +17,7 @@ export default function ServiceAreasPage() {
         title="Proudly serving Houston and beyond"
         description="Local expertise means faster routes and fewer surprises. Here's where we operate."
         photoHint="houston texas skyline"
-        photoSrc="assets/images/image7.jpeg"
+        photoSrc="/assets/images/image7.jpeg"
       />
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
@@ -51,7 +51,7 @@ export default function ServiceAreasPage() {
         title="Check coverage for your facility"
         buttonLabel="Request a quote"
         buttonHref="/quote"
-        backgroundImage="https://images.unsplash.com/photo-1717496331312-3e8aacfa27a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIxfHx8ZW58MHx8fHx8"
+        backgroundImage="/assets/images/service-areas/service-area-image-1.jpg"
       />
     </>
   );

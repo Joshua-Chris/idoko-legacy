@@ -3,9 +3,9 @@ import PageHero from '@/components/ui/PageHero';
 import QuoteForm from '@/components/forms/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Request a Quote | Idoko Legacy LLC',
+  title: 'Request a Quote | Idoko Legacy Medical Courier',
   description:
-    'Request a quote for recurring medical courier services or an urgent same-day delivery from Idoko Legacy LLC.',
+    'Request a quote for recurring medical courier services or an urgent same-day delivery from Idoko Legacy Medical Courier.',
 };
 
 export default function QuotePage() {
@@ -14,9 +14,9 @@ export default function QuotePage() {
       <PageHero
         eyebrow="Request a quote"
         title="Need reliable healthcare transportation?"
-        description="Whether you require recurring medical courier services or an urgent same-day delivery, Idoko Legacy LLC is ready to help. Complete the form and one of our logistics specialists will respond promptly."
+        description="Whether you require recurring medical courier services or an urgent same-day delivery, Idoko Legacy Medical Courier is ready to help. Complete the form and one of our logistics specialists will respond promptly."
         photoHint="delivery van road healthcare"
-        photoSrc="https://images.unsplash.com/photo-1647353629293-5099772e96f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDczfHx8ZW58MHx8fHx8"
+        photoSrc="/assets/images/quote-images/quote-image-1.jpg"
       />
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">

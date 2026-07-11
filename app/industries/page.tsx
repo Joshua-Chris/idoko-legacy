@@ -5,9 +5,9 @@ import IndustryList from '@/components/sections/IndustryList';
 import { industries } from '@/content/industries';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Idoko Legacy LLC',
+  title: 'Industries We Serve | Idoko Legacy Medical Courier',
   description:
-    'Idoko Legacy LLC serves hospitals, laboratories, pharmacies, clinics, and healthcare networks across Houston, Texas.',
+    'Idoko Legacy Medical Courier serves hospitals, laboratories, pharmacies, clinics, and healthcare networks across Houston, Texas.',
 };
 
 export default function IndustriesPage() {

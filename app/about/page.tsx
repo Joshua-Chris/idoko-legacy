@@ -5,9 +5,9 @@ import PageCTA from '@/components/ui/PageCTA';
 import StatsStrip from '@/components/sections/StatsStrip';
 
 export const metadata: Metadata = {
-  title: 'About Us | Idoko Legacy LLC',
+  title: 'About Us | Idoko Legacy Medical Courier',
   description:
-    'Idoko Legacy LLC is a professional healthcare logistics and medical courier company serving Houston, Texas.',
+    'Idoko Legacy Medical Courier is a professional healthcare logistics and medical courier company serving Houston, Texas.',
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
         eyebrow="About us"
         title="Delivering excellence in healthcare logistics"
         description="A professional healthcare logistics and medical courier company dedicated to secure, dependable, and efficient transportation throughout Houston, Texas."
-        photoSrc="assets/images/image5.jpeg"
+        photoSrc="/assets/images/image5.jpeg"
         photoHint="healthcare team hospital hallway"
       />
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div
             className="h-80 w-full rounded-3xl bg-cover bg-center lg:h-[420px]"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1634025130850-1d24389e25c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvc3BpdGFsJTIwZGVsaXZlcnklMjB0cmFuc3BvcnRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D`,
+              backgroundImage: `url('/assets/images/about-images/about-image-2.jpg')`,
             }}
           />
 
@@ -89,7 +89,7 @@ export default function AboutPage() {
         title="Ready to work with a logistics partner you can trust?"
         buttonLabel="Request a quote"
         buttonHref="/quote"
-        backgroundImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDU4fHx8ZW58MHx8fHx8"
+        backgroundImage="/assets/images/about-images/about-image-1.jpg"
       />
     </>
   );

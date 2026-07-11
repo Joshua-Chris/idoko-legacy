@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Idoko Legacy LLC',
+  title: 'Privacy Policy | Idoko Legacy Medical Courier',
   description:
-    "Privacy policy for Idoko Legacy LLC's healthcare logistics and medical courier services.",
+    "Privacy policy for Idoko Legacy Medical Courier's healthcare logistics and medical courier services.",
 };
 
 const sections = [

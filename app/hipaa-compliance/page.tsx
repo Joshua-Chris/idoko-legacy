@@ -17,9 +17,9 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 
 export const metadata: Metadata = {
-  title: 'HIPAA Compliance | Idoko Legacy LLC',
+  title: 'HIPAA Compliance | Idoko Legacy Medical Courier',
   description:
-    'Idoko Legacy LLC supports HIPAA-conscious operations through secure pickup, controlled transportation, and chain-of-custody procedures.',
+    'Idoko Legacy Medical Courier supports HIPAA-conscious operations through secure pickup, controlled transportation, and chain-of-custody procedures.',
 };
 
 const commitments = [
@@ -45,19 +45,21 @@ const stats = [
 
 const practiceCards = [
   {
-    src: 'https://images.unsplash.com/photo-1614018453562-77f6180ce036?fm=jpg&q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0',
+    src: '/assets/images/services-images/service-image-2.jpg',
     title: 'Controlled pickup',
     description:
       'Materials are received and verified under consistent, documented procedures.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1582902281043-69c645f40cd5?fm=jpg&q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0',
+    src: '/assets/images/services-images/service-image-3.jpg',
+
     title: 'Secure transport',
     description:
       'Shipments remain under continuous control throughout transportation.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?fm=jpg&q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0',
+    src: '/assets/images/services-images/service-image-4.jpg',
+
     title: 'Verified delivery',
     description:
       'Every delivery is confirmed, keeping the chain of custody intact.',
@@ -72,7 +74,7 @@ export default function HipaaCompliancePage() {
         title="Privacy. Security. Confidentiality."
         description="Healthcare logistics involves more than transportation. It requires protecting sensitive healthcare information while maintaining secure operational procedures."
         photoHint="secure data confidential document"
-        photoSrc="https://images.unsplash.com/photo-1758691461990-03b49d969495?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        photoSrc="/assets/images/services-images/service-image-5.jpg"
       />
 
       {/* Intro + commitments */}
@@ -95,10 +97,10 @@ export default function HipaaCompliancePage() {
                   Built around trust
                 </h2>
                 <p className="mt-5 max-w-sm text-base leading-relaxed text-primary-950/80">
-                  At Idoko Legacy LLC, we strive to support healthcare
-                  organizations through operational practices designed to reduce
-                  risk and promote secure handling of healthcare-related
-                  shipments.
+                  At Idoko Legacy Medical Courier, we strive to support
+                  healthcare organizations through operational practices
+                  designed to reduce risk and promote secure handling of
+                  healthcare-related shipments.
                 </p>
                 <p className="mt-5 max-w-sm text-base leading-relaxed text-primary-950/80">
                   We continually work toward maintaining procedures that align
@@ -198,7 +200,7 @@ export default function HipaaCompliancePage() {
         description="Our team is always available to discuss our HIPAA-related operations."
         buttonLabel="Contact us"
         buttonHref="/contact"
-        backgroundImage="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMwfHx8ZW58MHx8fHx8"
+        backgroundImage="/assets/images/services-images/service-image-6.jpg"
       />
     </>
   );

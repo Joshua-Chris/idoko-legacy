@@ -3,13 +3,13 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 export const alt =
-  'Idoko Legacy LLC — Healthcare Logistics & Medical Courier Services';
+  'Idoko Legacy — Healthcare Logistics & Medical Courier Services';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image() {
   const logoData = readFileSync(
-    join(process.cwd(), 'public/assets/icons/light-logo.png'),
+    join(process.cwd(), 'public/assets/icons/light-logo-t.png'),
   );
   const logoSrc = `data:image/png;base64,${logoData.toString('base64')}`;
 
@@ -54,7 +54,7 @@ export default async function Image() {
       <div
         style={{ fontSize: 24, marginTop: 32, color: 'rgba(255,255,255,0.7)' }}
       >
-        Idoko Legacy LLC &mdash; Trust today. Legacy tomorrow.
+        Idoko Legacy Medical Courier &mdash; Trust today. Legacy tomorrow.
       </div>
     </div>,
     { ...size },

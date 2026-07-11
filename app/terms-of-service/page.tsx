@@ -2,15 +2,15 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Idoko Legacy LLC',
+  title: 'Terms of Service | Idoko Legacy Medical Courier',
   description:
-    "Terms of service for Idoko Legacy LLC's healthcare logistics and medical courier services.",
+    "Terms of service for Idoko Legacy Medical Courier's healthcare logistics and medical courier services.",
 };
 
 const sections = [
   {
     title: 'Services',
-    body: 'Idoko Legacy LLC provides medical courier and healthcare logistics services, including but not limited to laboratory sample transport, pharmaceutical delivery, medical equipment transportation, and scheduled or on-demand deliveries, within Houston, Texas and surrounding communities.',
+    body: 'Idoko Legacy Medical Courier provides medical courier and healthcare logistics services, including but not limited to laboratory sample transport, pharmaceutical delivery, medical equipment transportation, and scheduled or on-demand deliveries, within Houston, Texas and surrounding communities.',
   },
   {
     title: 'Scheduling and delivery windows',
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     title: 'Liability',
-    body: 'Idoko Legacy LLC handles every shipment with care; however, our liability for loss or damage is limited as set forth in the service agreement applicable to your account. Please contact us for details specific to your service arrangement.',
+    body: 'Idoko Legacy Medical Courier handles every shipment with care; however, our liability for loss or damage is limited as set forth in the service agreement applicable to your account. Please contact us for details specific to your service arrangement.',
   },
   {
     title: 'Cancellations',

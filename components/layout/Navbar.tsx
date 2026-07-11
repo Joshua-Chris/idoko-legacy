@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/hipaa-compliance', label: 'HIPAA compliance' },
   { href: '/service-areas', label: 'Service areas' },
   { href: '/contact', label: 'Contact' },
+  { href: '/careers', label: 'Careers' },
 ];
 
 export default function Navbar() {
@@ -53,10 +54,10 @@ export default function Navbar() {
               <Image
                 src={
                   scrolled
-                    ? '/assets/icons/logo.png'
+                    ? '/assets/icons/legacy-logo.png'
                     : '/assets/icons/light-logo-t.png'
                 }
-                alt="Idoko Legacy LLC"
+                alt="Idoko Legacy Medical Courier"
                 width={200}
                 height={80}
                 priority
